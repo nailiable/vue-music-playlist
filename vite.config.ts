@@ -19,9 +19,11 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: './lib/main.ts',
+      entry: {
+        playlist: './lib/main.ts',
+        'auto-imports': './lib/auto-imports.ts',
+      },
       name: 'playlist',
-      fileName: 'playlist',
     },
     rollupOptions: {
       external: ['vue', '@naiable/utils'],

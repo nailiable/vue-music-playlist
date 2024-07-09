@@ -16,9 +16,16 @@
     "playlist"
   ],
   "exports": {
-    "types": "./lib/main.ts",
-    "import": "./dist/playlist.js",
-    "require": "./dist/playlist.umd.cjs"
+    ".": {
+      "types": "./lib/main.ts",
+      "import": "./dist/playlist.js",
+      "require": "./dist/playlist.cjs"
+    },
+    "./auto-import": {
+      "types": "./lib/auto-imports.ts",
+      "import": "./dist/auto-imports.js",
+      "require": "./dist/auto-imports.cjs"
+    }
   },
   "main": "./dist/playlist.umd.cjs",
   "module": "./dist/playlist.js",
@@ -39,6 +46,8 @@
     "ts-pattern": "5.2.0",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
-    "vue": "^3.4.27"
+    "vue": "^3.4.27",
+    "@vitejs/plugin-vue": "5.0.5",
+    "unplugin-auto-import": "0.17.6"
   }
 }
